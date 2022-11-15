@@ -19,36 +19,78 @@ int main()
 
     if (loop == "while")
     {
-        while (b - a >= 0)
+        if (b >= a)
         {
-            if (a % 10 == x || a % 10 == y)
+            while (b - a >= 0)
             {
-                cout << a << " ";
+                if (a % 10 == x || a % 10 == y)
+                {
+                    cout << a << " ";
+                }
+                a++;
             }
-            a++;
+        }
+        else
+        {
+            while (a - b >= 0)
+            {
+                if (b % 10 == x || b % 10 == y)
+                {
+                    cout << b << " ";
+                }
+                b++;
+            }
         }
     }
     
     if (loop == "dowhile")
     {
-        do
+        if (b >= a)
         {
-            if (a % 10 == x || a % 10 == y)
+            do
             {
-                cout << a << " ";
-            }
-            a++;
-        } while (b - a >= 0);
+                if (a % 10 == x || a % 10 == y)
+                {
+                    cout << a << " ";
+                }
+                a++;
+            } while (b - a >= 0);
+        }
+        else
+        {
+            do
+            {
+                if (b % 10 == x || b % 10 == y)
+                {
+                    cout << b << " ";
+                }
+                b++;
+            } while (a - b >= 0);
+        }
     }
     
     if (loop == "for")
     {
-        for (; b - a >= 0; a++)
+        if (b >= a)
         {
-            if (a % 10 == x || a % 10 == y)
+            for (; b - a >= 0; a++)
             {
-                cout << a << " ";
+                if (a % 10 == x || a % 10 == y)
+                {
+                    cout << a << " ";
+                }
             }
         }
+        else
+        {
+            for (; a - b >= 0; b++)
+            {
+                if (b % 10 == x || b % 10 == y)
+                {
+                    cout << b << " ";
+                }
+            }
+        }
+        
     }
 }
