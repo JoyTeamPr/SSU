@@ -21,4 +21,4 @@ int main()
 		if (function(a) != 'E') cout << a << "\t\t" << function(a) << endl;
 		else cout << a << "\t\t" << "Функция не определена\n";
 	}
-}
+} // погрешность

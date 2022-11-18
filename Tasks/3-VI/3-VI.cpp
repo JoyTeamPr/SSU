@@ -22,4 +22,4 @@ int main()
 	{
 		cout << i << "\t\t" << function(i, a, b) << endl;
 	}
-}
+} // погрешность

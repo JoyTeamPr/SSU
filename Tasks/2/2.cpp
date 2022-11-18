@@ -23,4 +23,4 @@ int main()
         function(num);
         cout << res << endl << endl;
     }
-}
+} // ссылка
