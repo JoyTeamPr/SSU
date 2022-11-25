@@ -2,13 +2,10 @@
 #include <Windows.h>
 using namespace std;
 
-int res;
-
-int function(int num)
+void function(int &num)
 {
-    if (num % 5 == 0) ::res = num / 5;
-    else ::res = num + 1;
-    return 0;
+    if (num % 5 == 0) num = num / 5;
+    else num = num + 1;
 }
 
 int main()
@@ -21,6 +18,6 @@ int main()
     {
         cin >> num;
         function(num);
-        cout << res << endl << endl;
+        cout << num << endl << endl;
     }
-} // ссылка
+}
