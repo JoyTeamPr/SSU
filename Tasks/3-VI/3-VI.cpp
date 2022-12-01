@@ -2,10 +2,12 @@
 #include <Windows.h>
 using namespace std;
 
+double e = 0.0000001;
+
 double function(double x, double a, double b)
 {
-	if (pow(x, 2) - 5 * x < 0) return a + b;
-	if (pow(x, 2) - 5 * x >= 0 && pow(x, 2) - 5 * x < 10) return a - b;
+	if (pow(x, 2) - 5 * x < -e) return a + b;
+	if (pow(x, 2) - 5 * x >= e && pow(x, 2) - 5 * x < 10 - e) return a - b;
 	if (pow(x, 2) - 5 * x >= 10) return a * b;
 	return 0;
 }

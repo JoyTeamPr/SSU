@@ -18,4 +18,4 @@ int main()
         first = cup;
         cout << second << ' ';
     }
-}
+} // при 1 выводит 2 числа
