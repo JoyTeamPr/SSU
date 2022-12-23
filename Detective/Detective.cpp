@@ -57,7 +57,7 @@ int main()
         cin >> greeting;
     }
     cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n"; // отступы для красоты (показывают начало квеста)
-    string enter, answer1, answer2, answer3, answer4, answer4_1, answer4_2, answer4_4, answer4_5, suspect1, answer5, answer5_1, answer5_2, answer5_2_1;
+    string enter, answer1, answer2, answer3, answer4, answer4_1, answer4_2, answer4_4, answer4_5, suspect1, answer5, answer5_1, answer5_2, answer5_2_1, suspect2;
     int relations_Johnson = 0, success = 0, nerves_Harington = 0, interrogation;
     bool got_it = false, got_it_pre = false, got_it_pre_pre = false, blood_on_the_floor = false, sticker = false, diary = false, fingers_shelf = false, fingers_beauty = false, ring = false;
     cout << "Ночь. 03:34\nЗвонит телефон\n";
@@ -418,7 +418,7 @@ int main()
             cout << "- Я middle-разработчик в компании google. Мы заканчиваем большой проект в моей команде, поэтому, иногда, я могу задерживаться на работе\n";
             cout << "- А можете сказать адрес вашего офиса?\n";
             cout << "- Оу, а может не стоит?..\n";
-            cout << "- Мистер Харингтон, мне что, уговаривать вас? Пропала ваша жена и вы не хотите помоч расследованию?\n";
+            cout << "- Мистер Харингтон, мне что, уговаривать вас? Пропала ваша жена и вы не хотите помочь расследованию?\n";
             cout << "- В том то и дело, что пропала жена. Какое она может иметь отношение к моей работе?\n";
             while (got_it_pre == false)
             {
@@ -549,4 +549,16 @@ int main()
     }
     got_it = false;
     cout << "Результаты допроса\n";
+    if (interrogation == 1)
+    {
+        cout << "Мистер Харингтон попросил адвоката. Суд назначен на след неделю\n";
+    }
+    if (interrogation == 2)
+    {
+        cout << "Мисс Робинсон отправилась на работу Харингтона, он действительно был всю ночь на работе\n";
+    }
+    if (nerves_Harington >= 7) cout << "Мистер Харингтон был нервным. Будьте внимательны и осторожны\n";
+    cout << "Как вы думаете, кто виновен? (для статистики)\n";
+    cin >> suspect2;
+    cout << "Супер! Продолжаем!\n";
 }
